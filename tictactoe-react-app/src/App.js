@@ -17,7 +17,7 @@ function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
-    if (squares[i]) {
+    if (squares[i] || calculateWinner(squares)) {
       return;
     }
     const nextSquares = squares.slice();
@@ -50,8 +50,17 @@ function App() {
     return null;
   }
 
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else {
+    status = "Next Player: " + (xIsNext ? "X" : "O"); 
+  }
+
   return (
     <>
+    <div className="status">{ status }</div>
       <div className="board">
         <div className="board-row">
           <Square value={squares[0]} onSquaresClick={() => handleClick(0)} />
