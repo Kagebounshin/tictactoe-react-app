@@ -102,7 +102,7 @@ function App() {
     }
     return (
       <>
-      <li>
+      <li key={move}> 
         <button onclick={() => jumpTo(move)}>{ description }</button>
       </li>
       </>
