@@ -67,7 +67,7 @@ function App() {
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]
     setHistory(nextHistory);
-    setCurrentMove(nextHistory.length -1);
+    setCurrentMove(nextHistory.length - 1);
   }
 
   function jumpTo(nextMove) {
@@ -94,7 +94,7 @@ function App() {
     <>
     <div className="game">
       <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ul>{ moves }</ul>
@@ -113,10 +113,10 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i in winOptions) {
-    const [a,b ,c] = winOptions[i];
+    const [a, b, c] = winOptions[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     };
