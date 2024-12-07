@@ -55,7 +55,7 @@ ul {
 .square::before,
 .square::after {
   content: '.';
-  color: rgb(42, 184, 97);
+  color: transparent;
 }
 
 .status {
@@ -66,4 +66,11 @@ ul {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 2rem;
+}
+
+/* HOVER */
+
+button:hover {
+  transition: 1ms ease-in-out;
+  background-color: rgba(42, 184, 96, 0.849);
 }
