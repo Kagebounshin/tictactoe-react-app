@@ -24,7 +24,7 @@ ul {
 }
 
 .game-info {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -37,6 +37,7 @@ ul {
   height: 2rem;
   font-size: 1.5rem;
   margin: .2rem;
+  width: 14rem;
 }
 
 .square {
@@ -58,8 +59,8 @@ ul {
 }
 
 .status {
-  color: rgb(208, 243, 221);
-  font-size: 3.5rem;
+  color: rgb(42, 184, 97);
+  font-size: 3.3rem;
   font-weight: 700;
   letter-spacing: .05rem;
   text-align: center;
